@@ -2,26 +2,20 @@
 
 /**
  * @ngdoc function
- * @name polipokemonApp.controller:MainCtrl
+ * @name polipokemonApp.controller:CaptureCtrl
  * @description
- * # MainCtrl
+ * # CaptureCtrl
  * Controller of the polipokemonApp
  */
 angular.module('polipokemonApp')
-  .controller('MainCtrl', function() {
+  .controller('CaptureCtrl', function(webcam) {
     var vm = this;
+
     vm.init = init;
 
     vm.init();
 
     function init() {
-      vm.map = {
-        center: { latitude: 23.85, longitude: -102 },
-        zoom: 6
-      };
+      webcam.attach('#camera');
     }
-
-
-
-
   });
