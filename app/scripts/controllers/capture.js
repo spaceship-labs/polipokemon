@@ -12,10 +12,15 @@ angular.module('polipokemonApp')
     var vm = this;
 
     vm.init = init;
+    vm.preview = preview;
 
     vm.init();
 
     function init() {
       webcam.attach('#camera');
+    }
+
+    function preview(){
+    	webcam.freeze();
     }
   });

@@ -13,12 +13,17 @@ angular.module('polipokemonApp')
 function webcamService() {
   var service = {
     attach: attach,
+    freeze : freeze,
   };
 
   return service;
 
+
   function attach(element) {
     Webcam.attach(element);
 
+  }
+  function freeze(){
+  	Webcam.freeze();
   }
 }
